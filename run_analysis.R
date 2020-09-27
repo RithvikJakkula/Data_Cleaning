@@ -32,7 +32,7 @@ Merged_Data <- cbind(Subject, Y, X)
 TidyData <- Merged_Data %>% select(subject, code, contains("mean"), contains("std"))
 
 
-names(TidyData)[2] = "activity"
+names(TidyData)[2] = "activity" 
 names(TidyData)<-gsub("Acc", "Accelerometer", names(TidyData))
 names(TidyData)<-gsub("Gyro", "Gyroscope", names(TidyData))
 names(TidyData)<-gsub("BodyBody", "Body", names(TidyData))
